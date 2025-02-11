@@ -1,0 +1,65 @@
+* {
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+span {
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(238, 238, 238);
+    padding: 2px 5px 2px 5px;
+}
+
+.top {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    padding: 20px 60px 20px 60px;
+    font-size: 11pt;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row {
+    flex: 1 1 250px;
+}
+
+label, button {
+    font-size: 10pt;
+}
+
+.row.btn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+}
+
+button:first-child {
+    margin-top: 25px;
+}
+
+input {
+    width: 100%;
+    height: 9em;
+    margin-top: 3px;
+    border-color: lightgray;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 9pt;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Konversi Suhu</title>
+
+        <link href="css\style.css" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="top">
+            <h2>Konversi Suhu</h2>
+        </header>
+
+        <main>
+            <!--Introduction & guide-->
+            <section>
+                <p>
+                    Masukkan suhu derajat Celcius (&deg;C) yang akan dikonversi ke derajat Fahrenheit (&deg;F)
+                    dalam kotak sebelah kiri, lalu klik tombol <span>Convert</span> untuk mendapatkan hasilnya.
+                    Tombol <span>Reset</span> digunakan untuk mengulang konversi dari awal, sementara tombol <span>Reverse</span>
+                    akan menukar konversi dari derajat Fahrenheit (&deg;F) ke derajat Celcius (&deg;C).
+                </p>
+            </section>
+
+            <!--Form temperature input & result-->
+            <section class="forms">
+                <!-- <form class="forms"> -->
+                <div class="row">
+                    <label for="celc">Celcius (&deg;C)</label>
+                    <input id="main-input" type="number" required>
+                </div>
+                <div class="row btn">
+                    <button>Convert</button>
+                    <button>Reset</button>
+                    <button>Reverse</button>
+                </div>
+                <div class="row">
+                    <label for="fahr">Fahrenheit (&deg;F)</label>
+                    <input id="main-res" type="text" readonly>
+                </div>
+                <!-- </form> -->
+            </section>
+
+            <!--Conversion calculation-->
+            <section class="res">
+                <div>
+                    <br>
+                    <label for="how-res">Cara konversi</label>
+                    <input id="how-res" type="text" readonly>
+                </div>
+            </section>
+
+            <!--Detailed explanation of conversion-->
+            <section>
+                <header>
+                    <h3>
+                        Penjelasan mengenai konversi Celcius (&deg;C) ke Fahrenheit (&deg;F)
+                    </h3>
+                    <hr>
+                </header>
+
+                <article>
+                    <p>
+                        Perbandingan titik didih air dalam derajat Fahrenheit (&deg;F) dan derajat Celcius
+                        (&deg;C) adalah 9:5. Kemudian ketika mengubah suhu ke derajat Fahrenheit (&deg;F) perlu
+                        ditambahkan dengan 32&deg;, sehingga didapatkan rumus suhu (S) sebagai berikut.
+                    </p>
+                    <p>
+                        <b>Celcius (&deg;C) ke Fahrenheit (&deg;F):</b>
+                    </p>
+                    <p>
+                        S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 9/5) + 32
+                    </p>
+                    <p>atau</p>
+                    <p>
+                        S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 1,8) + 32
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made by naskaj. RevoU 2025.</p>
+        </footer>
+    </body>
+</html>
