@@ -22,41 +22,66 @@ main {
     line-height: 1.8;
     display: flex;
     flex-direction: column;
+
+    background-color: beige;
+    justify-self: center;
 }
 
 .forms {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: row;
     align-items: center;
 }
 
 .row {
-    flex: 1 1 250px;
+    flex: 1;
 }
 
 label, button {
     font-size: 10pt;
 }
 
-.row.btn {
+.btn {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     gap: 10px;
+    margin-left: 25px;
 }
 
 button:first-child {
-    margin-top: 25px;
+    margin-top: 33px;
 }
 
 input {
     width: 100%;
-    height: 9em;
+    height: 8em;
     margin-top: 3px;
     border-color: lightgray;
     border-radius: 10px;
+    padding-inline: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    .forms {
+        display: block;
+        /* flex-direction: column; */
+        align-items: start;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-block: 10px;
+        margin-left: auto;
+    }
+
+    button:first-child {
+        margin-top: auto;
+    }
 }
 
 footer {
