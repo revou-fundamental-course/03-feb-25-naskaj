@@ -1,35 +1,50 @@
+/* styling font */
 * {
     font-family: "Plus Jakarta Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
+/* styling background body */
+body {
+    background-color: #bddbc6;
+}
+
+/* styling tag span */
 span {
-    border: 1px solid gray;
-    border-radius: 3px;
-    background-color: rgb(238, 238, 238);
+    border: 1px solid black;
+    border-radius: 10px;
     padding: 2px 5px 2px 5px;
 }
 
+/* styling kelas top untuk tag header utama website */
 .top {
-    width: 100%;
     text-align: center;
+    margin: 20px 50px 10px 50px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: beige;
 }
 
+/* styling tag main */
 main {
-    padding: 20px 60px 20px 60px;
+    margin-inline: 50px;
+    padding: 5px 60px 20px 30px;
     font-size: 11pt;
     line-height: 1.8;
     display: flex;
     flex-direction: column;
-
-    background-color: beige;
     justify-self: center;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: beige;
 }
 
+/* styling kelas forms yang terdiri dari kolom input,
+tombol, dan kolom hasil */
 .forms {
+    width: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: row;
     align-items: center;
 }
@@ -38,10 +53,7 @@ main {
     flex: 1;
 }
 
-label, button {
-    font-size: 10pt;
-}
-
+/* styling kelas button */
 .btn {
     display: flex;
     flex-wrap: wrap;
@@ -51,23 +63,73 @@ label, button {
     margin-left: 25px;
 }
 
+/* styling warna background untuk tiap button */
+.convert {
+    background-color: #8fb1be;
+}
+
+.convert:hover {
+    background-color: #bddbc6;
+}
+
+.reset {
+    background-color: #d53302;
+}
+
+.reset:hover {
+    background-color: #ec7a58;
+}
+
+.reverse {
+    background-color: #fcc560;
+}
+
+.reverse:hover {
+    background-color: #ffdd9e;
+}
+
+/* styling ukuran font untuk tag label dan button */
+label, button {
+    font-size: 10pt;
+}
+
+/* styling untuk tag button */
+button {
+    width: 5em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* styling khusus untuk button pertama */
 button:first-child {
     margin-top: 33px;
 }
 
+/* styling untuk tag input */
 input {
     width: 100%;
-    height: 8em;
+    height: 7em;
     margin-top: 3px;
-    border-color: lightgray;
-    border-radius: 10px;
-    padding-inline: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-inline: 15px;
 }
 
+/* styling untuk kolom penjelasan detail konversi suhu */
+.explanation {
+    width: 99%;
+    margin-top: 30px;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #bddbc6;
+}
+
+/* styling khusus untuk layar dengan ukuran kurang dari 750px */
 @media screen and (max-width: 750px) {
     .forms {
         display: block;
-        /* flex-direction: column; */
         align-items: start;
     }
 
@@ -82,8 +144,13 @@ input {
     button:first-child {
         margin-top: auto;
     }
+
+    .explanation {
+        width: 98%;
+    }
 }
 
+/* styling untuk tag footer */
 footer {
     text-align: center;
     font-size: 9pt;
