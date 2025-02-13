@@ -5,41 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Konversi Suhu</title>
 
+        <!--Linked to CSS file-->
         <link href="css\style.css" rel="stylesheet">
         
+        <!--Linked to google font that will be used-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!--Header website-->
         <header class="top">
-            <h2>Konversi Suhu</h2>
+            <h2>Aplikasi Konversi Suhu</h2>
         </header>
 
         <main>
-            <!--Introduction & guide-->
+            <!--Introduction & guide about the conversion-->
             <section>
                 <p>
                     Masukkan suhu derajat Celcius (&deg;C) yang akan dikonversi ke derajat Fahrenheit (&deg;F)
-                    dalam kotak sebelah kiri, lalu klik tombol <span>Convert</span> untuk mendapatkan hasilnya.
-                    Tombol <span>Reset</span> digunakan untuk mengulang konversi dari awal, sementara tombol <span>Reverse</span>
-                    akan menukar konversi dari derajat Fahrenheit (&deg;F) ke derajat Celcius (&deg;C).
+                    dalam kotak sebelah kiri, lalu klik tombol <span class="convert">Convert</span> untuk mendapatkan hasilnya.
+                    Tombol <span class="reset">Reset</span> digunakan untuk mengulang konversi dari awal, sementara tombol
+                    <span class="reverse">Reverse</span> akan menukar konversi dari derajat Fahrenheit (&deg;F) ke derajat Celcius (&deg;C).
                 </p>
             </section>
 
-            <!--Form temperature input & result-->
+            <!--Form temperature input, button, & result-->
             <section class="forms">
                 <div class="row">
-                    <label id="label-input" for="main-input">Celcius (&deg;C)</label>
+                    <!--Form to take the number input-->
+                    <label id="label-input" for="main-input"><b>Celcius (&deg;C)</b></label>
                     <input id="main-input" type="number" placeholder="Masukkan angka disini" required>
                 </div>
                 <div class="row btn">
-                    <button onclick="convert()">Convert</button>
-                    <button onclick="reset()">Reset</button>
-                    <button onclick="reverse()">Reverse</button>
+                    <!--Button to process the input-->
+                    <button class="convert" onclick="convert()">Convert</button>
+                    <button class="reset" onclick="reset()">Reset</button>
+                    <button class="reverse" onclick="reverse()">Reverse</button>
                 </div>
                 <div class="row">
-                    <label id="label-res" for="main-res">Fahrenheit (&deg;F)</label>
+                    <!--Form to show the calculation result-->
+                    <label id="label-res" for="main-res"><b>Fahrenheit (&deg;F)</b></label>
                     <input id="main-res" type="text" placeholder="Hasil konversi" readonly>
                 </div>
             </section>
@@ -47,14 +53,15 @@
             <!--Conversion calculation-->
             <section class="res">
                 <div>
+                    <!--Form to show the calculation formula based on input-->
                     <br>
-                    <label for="how-res">Cara konversi</label>
+                    <label for="how-res"><b>Cara konversi</b></label>
                     <input id="how-res" type="text" readonly>
                 </div>
             </section>
 
             <!--Detailed explanation of conversion-->
-            <section>
+            <section class="explanation">
                 <header>
                     <h3 id="exp-title">
                         Penjelasan mengenai konversi Celcius (&deg;C) ke Fahrenheit (&deg;F)
@@ -62,11 +69,11 @@
                     <hr>
                 </header>
 
-                <article>
-                    <p id="exp-body">
+                <article id="exp-body">
+                    <p>
                         Perbandingan titik didih air dalam derajat Fahrenheit (&deg;F) dan derajat Celcius
-                        (&deg;C) adalah 9:5. Kemudian ketika mengubah suhu ke derajat Fahrenheit (&deg;F) perlu
-                        ditambahkan dengan 32&deg;, sehingga didapatkan rumus suhu (S) sebagai berikut.
+                        (&deg;C) adalah 9:5. Kemudian ketika mengubah suhu derajat lain ke derajat Fahrenheit (&deg;F)
+                        perlu ditambahkan dengan 32&deg;, sehingga didapatkan rumus suhu (S) sebagai berikut.
                     </p>
                     <p>
                         <b>Celcius (&deg;C) ke Fahrenheit (&deg;F):</b>
@@ -82,10 +89,12 @@
             </section>
         </main>
 
+        <!--Footer website-->
         <footer>
-            <p>Made by naskaj (2025).</p>
+            <p>Made by naskaj (2025)</p>
         </footer>
 
+        <!--Linked to javascript file-->
         <script src="js/index.js"></script>
     </body>
 </html>
